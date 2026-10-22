@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Supriya's personal portfolio website.">
+  <title>Supriya — Personal Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+<header class="header">
+  <nav class="nav wrap" aria-label="Main navigation">
+    <a class="brand" href="#home"><span class="monogram">S<span>.</span></span><span class="brand-name">Supriya</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </div>
+    <a class="talk-button" href="#contact">Let's talk <span>↗</span></a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero wrap" id="home">
+    <div class="hero-copy">
+      <p class="eyebrow">STUDENT · CREATIVE LEARNER</p>
+      <h1>Hi, I'm Supriya.<br>I build thoughtful<br>digital experiences<span class="coral">.</span></h1>
+      <div class="tiny-line"></div>
+      <p class="hero-description">I’m learning to turn ideas into simple, beautiful, and useful websites with HTML, CSS, and JavaScript.</p>
+      <a class="cta" href="#projects">View my work <span>→</span></a>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="portrait-circle"></div>
+      <img class="hero-photo" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85" alt="Portrait photo representing the portfolio owner">
+      <span class="spark spark-one">〰</span><span class="spark spark-two">✳</span>
+      <div class="plant" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
+    </div>
+  </section>
+
+  <section class="projects-section" id="projects">
+    <div class="wrap project-layout">
+      <div class="section-heading"><h2>Projects</h2><div class="tiny-line"></div><p>Selected practice work</p></div>
+      <div class="project-area">
+        <div class="filters" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="planning">Planning</button>
+        </div>
+        <div class="project-grid">
+          <article class="project-card" data-category="web">
+            <div class="project-image recipe"><div class="recipe-ui"><div class="search-bar">⌕ <span>Find a recipe</span></div><div class="food-row"><span>🥗</span><span>🍓</span><span>🍪</span></div></div></div>
+            <div class="project-info"><h3>Recipe Finder</h3><p>Recipe website concept with a clean search area and food categories.</p><button class="project-open" data-message="Recipe Finder is a practice concept. Add your real demo link here when it is published." aria-label="More about Recipe Finder">→</button><div class="project-detail" hidden>Built to practise HTML structure, CSS cards, and responsive design.</div></div>
+          </article>
+          <article class="project-card" data-category="planning">
+            <div class="project-image study"><div class="study-ui"><aside></aside><div class="task-list"><b>My study plan</b><span>● &nbsp; Read course notes</span><span>● &nbsp; Practice coding</span><span>● &nbsp; Review projects</span></div><div class="calendar">▦<small>WEEK PLAN</small></div></div></div>
+            <div class="project-info"><h3>Study Planner</h3><p>A simple planner concept for keeping study tasks and goals organised.</p><button class="project-open" data-message="Study Planner is a sample project description. Replace it with your own project details." aria-label="More about Study Planner">→</button><div class="project-detail" hidden>Practised layout, spacing, and presenting information in a clear visual order.</div></div>
+          </article>
+          <article class="project-card" data-category="web">
+            <div class="project-image travel"><div class="travel-ui"><aside></aside><div class="travel-main"></div><div class="travel-small"></div><div class="travel-small second"></div></div></div>
+            <div class="project-info"><h3>Travel Journal</h3><p>A travel-inspired gallery layout for collecting memorable destinations.</p><button class="project-open" data-message="Travel Journal is a sample project description. Link your working demo here if available." aria-label="More about Travel Journal">→</button><div class="project-detail" hidden>Practised image placement, card design, and layouts that adapt to screen sizes.</div></div>
+          </article>
+        </div>
+        <p class="project-note">Replace these sample concepts with projects you have actually completed before submitting.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-section wrap" id="about">
+    <div class="section-heading"><h2>Skills</h2><div class="tiny-line"></div></div>
+    <div class="skill-pills">
+      <div class="skill-pill"><span class="html-icon">5</span> HTML</div>
+      <div class="skill-pill"><span class="css-icon">3</span> CSS</div>
+      <div class="skill-pill"><span class="js-icon">JS</span> JavaScript</div>
+    </div>
+    <div class="about-mini"><h2>A little about me</h2><p>I’m a student building my web development skills one project at a time. I enjoy learning, experimenting with design, and making websites that are easy to use.</p></div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="wrap contact-wrap"><div><p class="eyebrow">HAVE A PROJECT IN MIND?</p><h2>Let's make something<br>meaningful<span class="coral">.</span></h2><p>Use the form to test the contact interaction. This demo does not send messages.</p></div>
+      <form id="contactForm" class="contact-form" novalidate>
+        <label for="name">Your name</label><input id="name" name="name" required placeholder="Enter your name">
+        <label for="email">Email address</label><input id="email" name="email" type="email" required placeholder="you@example.com">
+        <label for="message">Message</label><textarea id="message" name="message" rows="3" required placeholder="Say hello..."></textarea>
+        <button class="cta" type="submit">Check message <span>→</span></button><p id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="footer wrap"><a class="brand" href="#home"><span class="monogram">S<span>.</span></span><span class="brand-name">Supriya</span></a><p>Made with care · <span id="year"></span></p><a href="#home">Back to top ↑</a></footer>
+</body>
+</html>
